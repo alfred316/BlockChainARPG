@@ -1,0 +1,275 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2235585464322800938
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2235585464322800939}
+  m_Layer: 0
+  m_Name: BigPowerupSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2235585464322800939
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2235585464322800938}
+  m_LocalRotation: {x: -0, y: 0.9172359, z: -0, w: 0.3983445}
+  m_LocalPosition: {x: -6.2, y: -3.61, z: -15.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2235585465492651820}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 133.05101, z: 0}
+--- !u!1 &2235585464380043962
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2235585464380043963}
+  m_Layer: 0
+  m_Name: PowerupSpawnpoint (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2235585464380043963
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2235585464380043962}
+  m_LocalRotation: {x: -0, y: 0.75291145, z: -0, w: 0.6581219}
+  m_LocalPosition: {x: -41.1, y: -3.61, z: 5.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2235585465492651820}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 97.686005, z: 0}
+--- !u!1 &2235585464499927063
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2235585464499927060}
+  m_Layer: 0
+  m_Name: PowerupSpawnpoint (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2235585464499927060
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2235585464499927063}
+  m_LocalRotation: {x: -0, y: -0.7890608, z: -0, w: 0.6143152}
+  m_LocalPosition: {x: 23.9, y: -3.97, z: -24.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2235585465492651820}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: -104.19601, z: 0}
+--- !u!1 &2235585464985429538
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2235585464985429539}
+  m_Layer: 0
+  m_Name: PowerupSpawnpoint (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2235585464985429539
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2235585464985429538}
+  m_LocalRotation: {x: -0, y: 0.9172359, z: -0, w: 0.3983445}
+  m_LocalPosition: {x: -27.6, y: -3.61, z: 22.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2235585465492651820}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 133.05101, z: 0}
+--- !u!1 &2235585465429916387
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2235585465429916384}
+  m_Layer: 0
+  m_Name: PowerupSpawnpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2235585465429916384
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2235585465429916387}
+  m_LocalRotation: {x: -0, y: -0.9270409, z: -0, w: 0.3749602}
+  m_LocalPosition: {x: -1.4437895, y: -3.1243057, z: 8.676636}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2235585465492651820}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -135.95601, z: 0}
+--- !u!1 &2235585465492651822
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2235585465492651820}
+  - component: {fileID: 2235585465492651823}
+  m_Layer: 0
+  m_Name: PowerupSpawnManager
+  m_TagString: PowerupSpawnManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2235585465492651820
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2235585465492651822}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.95621, y: 5.1243057, z: -9.676636}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2235585465429916384}
+  - {fileID: 2235585465824961181}
+  - {fileID: 2235585464499927060}
+  - {fileID: 2235585466000785244}
+  - {fileID: 2235585464380043963}
+  - {fileID: 2235585464985429539}
+  - {fileID: 2235585464322800939}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2235585465492651823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2235585465492651822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cddf47e6cea82e4b8f39eca5409b977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 711199931415570561, guid: 2648e243357d88d44ad3f8a8141c57d6, type: 3}
+  mana: {fileID: 1904780022523721063, guid: 38c45c5a7edc67d4287941341631877f, type: 3}
+  bigBoost: {fileID: 8695660184591196857, guid: a369663d6b91e7d43a7b3a179064ed7a,
+    type: 3}
+  powerupsToSpawn: 0
+  spawnTime: 20
+  spawnPoints:
+  - {fileID: 2235585465429916384}
+  - {fileID: 2235585465824961181}
+  - {fileID: 2235585464499927060}
+  - {fileID: 2235585466000785244}
+  - {fileID: 2235585464380043963}
+  - {fileID: 2235585464985429539}
+--- !u!1 &2235585465824961180
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2235585465824961181}
+  m_Layer: 0
+  m_Name: PowerupSpawnpoint (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2235585465824961181
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2235585465824961180}
+  m_LocalRotation: {x: -0, y: -0.9270409, z: -0, w: 0.3749602}
+  m_LocalPosition: {x: 8.7, y: -3.1243057, z: -1.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2235585465492651820}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: -135.95601, z: 0}
+--- !u!1 &2235585466000785247
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2235585466000785244}
+  m_Layer: 0
+  m_Name: PowerupSpawnpoint (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2235585466000785244
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2235585466000785247}
+  m_LocalRotation: {x: -0, y: 0.035095196, z: -0, w: 0.999384}
+  m_LocalPosition: {x: 4.6, y: -3.61, z: -41.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2235585465492651820}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 4.0220003, z: 0}

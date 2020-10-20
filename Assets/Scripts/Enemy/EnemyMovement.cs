@@ -44,4 +44,19 @@ public class EnemyMovement : MonoBehaviour
             nav.enabled = false;
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.transform.tag == "BreakableEnvironment")
+        {
+            nav.SetDestination(other.transform.position);
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.transform.tag == "BreakableEnvironment")
+        {
+            nav.SetDestination(player.position);
+        }
+    }
 }

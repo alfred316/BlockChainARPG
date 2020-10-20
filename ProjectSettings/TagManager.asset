@@ -12,6 +12,14 @@ TagManager:
   - LegendaryLoot
   - CharacterSheetUI
   - PlayerInventoryUI
+  - BreakableEnvironment
+  - EnemySpawnManager
+  - PowerupSpawnManager
+  - Health
+  - Mana
+  - BigPowerup
+  - PortalOut
+  - PortalIn
   layers:
   - Default
   - TransparentFX

@@ -15,6 +15,9 @@ public class EnemyAttack : MonoBehaviour
     bool playerInRange;                         // Whether player is within the trigger collider and can be attacked.
     float timer;                                // Timer for counting up to the next attack.
 
+    //GameObject wall;
+    BreakableEnv envWall;
+    bool wallInRange;
 
     void Awake()
     {
@@ -35,6 +38,13 @@ public class EnemyAttack : MonoBehaviour
             playerInRange = true;
             anim.SetBool("IsAttacking", true);
         }
+
+        if (other.transform.tag == "BreakableEnvironment")
+        {
+            wallInRange = true;
+            anim.SetBool("IsAttacking", true);
+            envWall = other.gameObject.GetComponent<EnvManager>().envWall;
+        }
     }
 
 
@@ -46,6 +56,13 @@ public class EnemyAttack : MonoBehaviour
             // ... the player is no longer in range.
             playerInRange = false;
             anim.SetBool("IsAttacking", false);
+        }
+
+        if (other.transform.tag == "BreakableEnvironment")
+        {
+            wallInRange = false;
+            anim.SetBool("IsAttacking", false);
+            //envWall = other.gameObject.GetComponent<BreakableEnv>();
         }
     }
 
@@ -77,10 +94,14 @@ public class EnemyAttack : MonoBehaviour
         timer = 0f;
 
         // If the player has health to lose...
-        if (playerHealth.currentHealth > 0)
+        if (playerHealth.currentHealth > 0 && playerInRange)
         {
             // ... damage the player.
             playerHealth.TakeDamage(attackDamage);
         }
+        if (envWall.GetCurrentHealth() > 0 && wallInRange)
+        {
+            envWall.EnvTakeDamage(attackDamage);
+        }  
     }
 }
