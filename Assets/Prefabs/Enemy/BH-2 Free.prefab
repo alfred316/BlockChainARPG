@@ -1330,7 +1330,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4410725720569043527}
-  m_LocalRotation: {x: -0, y: -0.99662, z: -0, w: -0.08215002}
+  m_LocalRotation: {x: -0, y: -0.99662024, z: 0, w: -0.0821472}
   m_LocalPosition: {x: 5.7, y: 0.099999905, z: 4.12}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_Children:
@@ -1384,10 +1384,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 0.3
+  m_Height: 1.9085716
   m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 1.0457143, z: 0}
 --- !u!135 &4410725721571411716
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1452,7 +1452,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 4410725720569043527}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Speed: 3
   m_Acceleration: 8
   avoidancePriority: 50
@@ -1462,7 +1462,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: 0
+  m_BaseOffset: -0.1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!1 &4410725720569043529

@@ -19,6 +19,7 @@ public class PlayerCasting : MonoBehaviour
     public float currentMana;
     public float manaCost = 15f;
     public Slider manaSlider;
+    public AudioSource fireballSound;
 
     private void Awake()
     {
@@ -74,6 +75,8 @@ public class PlayerCasting : MonoBehaviour
 
         GameObject fireBall = Resources.Load<GameObject>("Spells/Fireball") as GameObject;
         Instantiate(fireBall, rayStart.transform.position, rayStart.transform.rotation);
+
+        fireballSound.Play();
         //clone.GetComponent<Rigidbody>().AddForce(clone.transform.forward * 5);
 
         /*

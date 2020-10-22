@@ -25,7 +25,7 @@ public class PortalManager : MonoBehaviour
         {
             if (other.transform.tag == "Player")
             {
-                other.transform.position = PortalIn.transform.position + new Vector3(0, 0, 3);
+                other.transform.position = new Vector3(PortalIn.transform.position.x, other.transform.position.y, PortalIn.transform.position.z + 3);
             }
         }
 
@@ -33,7 +33,7 @@ public class PortalManager : MonoBehaviour
         {
             if (other.transform.tag == "Player")
             {
-                other.transform.position = PortalOut.transform.position - new Vector3(0, 0, 3);
+                other.transform.position = new Vector3(PortalOut.transform.position.x, other.transform.position.y, PortalOut.transform.position.z - 3);
             }
         }
 

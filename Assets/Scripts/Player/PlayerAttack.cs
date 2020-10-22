@@ -17,7 +17,7 @@ public class PlayerAttack : MonoBehaviour
     RaycastHit meleeHit;                            // A raycast hit to get information about what was hit.
     public GameObject rayStart;
     List<GameObject> enemies;
-
+    public AudioSource playerAttack;
     private void Awake()
     {
         playerCharacterManager = GetComponent<PlayerCharacterManager>();
@@ -108,6 +108,7 @@ public class PlayerAttack : MonoBehaviour
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
             //flail around
         }
+        playerAttack.Play();
     }
 
     public void AOEAttack()

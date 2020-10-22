@@ -18,6 +18,12 @@ public class EnvManager : MonoBehaviour
         if(envWall.GetIsBroken())
         {
             Destroy(gameObject);
+            /*
+            MeshRenderer mesh = gameObject.GetComponent<MeshRenderer>();
+            BoxCollider col = gameObject.GetComponent<BoxCollider>();
+            mesh.enabled = false;
+            col.enabled = false;
+            */
         }
     }
 

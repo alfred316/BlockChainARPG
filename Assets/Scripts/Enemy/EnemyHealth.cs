@@ -97,26 +97,26 @@ public class EnemyHealth : MonoBehaviour
                 //instantiate loot obj, loot obj has script that when player collides will generate their loot
                 //green
                 GameObject commonloot = Resources.Load<GameObject>("Loot/Common/CommonLoot") as GameObject;
-                Instantiate(commonloot,transform.position, Quaternion.identity);
+                Instantiate(commonloot,transform.position + new Vector3(0, 1, 0), Quaternion.identity);
                 break;
             case 1:
                 //blue
                 GameObject rareloot = Resources.Load<GameObject>("Loot/Rare/RareLoot") as GameObject;
-                Instantiate(rareloot, transform.position, Quaternion.identity);
+                Instantiate(rareloot, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
                 break;
             case 2:
                 //purple
                 GameObject epicloot = Resources.Load<GameObject>("Loot/Epic/EpicLoot") as GameObject;
-                Instantiate(epicloot, transform.position, Quaternion.identity);
+                Instantiate(epicloot, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
                 break;
             case 3:
                 //legendary
                 GameObject leggoloot = Resources.Load<GameObject>("Loot/Legendary/LegendaryLoot") as GameObject;
-                Instantiate(leggoloot, transform.position, Quaternion.identity);
+                Instantiate(leggoloot, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
                 break;
             case -1:
                 GameObject errorloot = Resources.Load<GameObject>("Loot/Common/CommonLoot") as GameObject;
-                Instantiate(errorloot, transform.position, Quaternion.identity);
+                Instantiate(errorloot, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
                 //error
                 break;
         }

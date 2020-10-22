@@ -61,6 +61,26 @@ public class PowerupManager : MonoBehaviour
                 PlayerInventoryUI playerInventoryUI = GameObject.FindGameObjectWithTag("PlayerInventoryUI").GetComponent<PlayerInventoryUI>();
                 playerInventoryUI.UpdatePlayerInventoryVisuals();
             }
+            if(transform.tag == "RebuildWall")
+            {
+                GameObject[] walls = GameObject.FindGameObjectsWithTag("WallSpawnpoint");
+                foreach(GameObject env in walls)
+                {
+                    //MeshRenderer mesh = env.GetComponent<MeshRenderer>();
+                    //BoxCollider col = env.GetComponent<BoxCollider>();
+                    Debug.Log("found walls");
+                    //if (col.enabled == false && mesh.enabled == false)
+                    if(env.transform.childCount == 0)
+                    {
+                        Debug.Log("Rebuilding Wall");
+                        //env.SetActive(true);
+                        //mesh.enabled = true;
+                        //col.enabled = true;
+                        //GameObject breakmeWall = Resources.Load<GameObject>("Props/BreakableDoor") as GameObject;
+                        //Instantiate(breakmeWall, env.transform.position, Quaternion.identity);
+                    }
+                }
+            }
             Destroy(gameObject);
         }
     }
