@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemySpawnManager : MonoBehaviour
 {
@@ -12,12 +13,15 @@ public class EnemySpawnManager : MonoBehaviour
     public float spawnTime = 60f;            // How long between each spawn.
     public Transform[] spawnPoints;         // An array of the spawn points this enemy can spawn from.
 
+    public Text waveCount;
+
     // Start is called before the first frame update
     void Start()
     {
         maxWave = 10;
         currentWave = 1;
         enemiesInWave = 3;
+        waveCount.text = "0";
         SpawnWave();
         InvokeRepeating("SpawnWave", spawnTime, spawnTime);
     }
@@ -50,5 +54,6 @@ public class EnemySpawnManager : MonoBehaviour
             Instantiate(zombie, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
         }
         currentWave++;
+        waveCount.text = currentWave.ToString();
     }
 }
