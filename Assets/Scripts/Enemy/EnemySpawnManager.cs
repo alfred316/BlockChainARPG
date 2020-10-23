@@ -10,7 +10,7 @@ public class EnemySpawnManager : MonoBehaviour
     public int enemiesInWave;
 
     public GameObject zombie;
-    public float spawnTime = 60f;            // How long between each spawn.
+    public float spawnTime = 30f;            // How long between each spawn.
     public Transform[] spawnPoints;         // An array of the spawn points this enemy can spawn from.
 
     public Text waveCount;
@@ -18,8 +18,8 @@ public class EnemySpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        maxWave = 10;
-        currentWave = 1;
+        maxWave = 5;
+        currentWave = 0;
         enemiesInWave = 3;
         waveCount.text = "0";
         SpawnWave();
@@ -29,15 +29,15 @@ public class EnemySpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(currentWave > 0 && currentWave < 5)
+        if(currentWave > 0 && currentWave < 3)
         {
             enemiesInWave = 3;
         }
-        if(currentWave >= 5 && currentWave < 10)
+        if(currentWave >= 5 && currentWave < 5)
         {
             enemiesInWave = 5;
         }
-        if(currentWave == 10)
+        if(currentWave == 5)
         {
             enemiesInWave = 10;
         }
