@@ -17,14 +17,19 @@ public class CryptoManager : MonoBehaviour
     }
 
     //for button1
-    public void ButtonOneClick()
+    public void ButtonOneClick() //stake
     {
         Debug.Log("button 1 pressed");
     }
 
     //for button2
-    public void ButtonTwoClick()
+    public void ButtonTwoClick() //approve
     {
         Debug.Log("button 2 pressed");
+    }
+
+    public void ButtonThreeClick() //connect mask
+    {
+        Debug.Log("button 3 pressed");
     }
 }
