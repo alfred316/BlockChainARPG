@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class PlayerHealth : MonoBehaviour
     //PlayerShooting playerShooting;                              // Reference to the PlayerShooting script.
     bool isDead;                                                // Whether the player is dead.
     bool damaged;                                               // True when the player gets damaged.
+    public GameObject deathUI;
 
     // Start is called before the first frame update
     void Awake()
@@ -113,5 +115,12 @@ public class PlayerHealth : MonoBehaviour
         // Turn off the movement and shooting scripts.
         playerMovement.enabled = false;
         //playerShooting.enabled = false;
+
+        deathUI.SetActive(true);
+    }
+
+    public void restartGame()
+    {
+        SceneManager.LoadScene("CaveZombies");
     }
 }
