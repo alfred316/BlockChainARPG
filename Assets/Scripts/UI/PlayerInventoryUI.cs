@@ -7,6 +7,7 @@ public class PlayerInventoryUI : MonoBehaviour
 {
     public List<GameObject> UiItems;
     public GameObject PlayerInventoryPanel;
+    public GameObject backImage;
 
     GameObject player;                          // Reference to the player GameObject.
     PlayerCharacterManager playerManager;
@@ -32,10 +33,12 @@ public class PlayerInventoryUI : MonoBehaviour
             if (PlayerInventoryPanel.activeInHierarchy)
             {
                 PlayerInventoryPanel.SetActive(false);
+                backImage.SetActive(false);
             }
             else if (!PlayerInventoryPanel.activeInHierarchy)
             {
                 PlayerInventoryPanel.SetActive(true);
+                backImage.SetActive(true);
                 UpdatePlayerInventoryVisuals();
             }
         }

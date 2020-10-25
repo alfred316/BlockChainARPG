@@ -99,9 +99,14 @@ public class EnemyAttack : MonoBehaviour
             // ... damage the player.
             playerHealth.TakeDamage(attackDamage);
         }
-        if (envWall.GetCurrentHealth() > 0 && wallInRange)
+        if (wallInRange)
         {
-            envWall.EnvTakeDamage(attackDamage);
+            if(envWall.GetCurrentHealth() > 0)
+            {
+                //damage the wall
+                envWall.EnvTakeDamage(attackDamage);
+            }
+            
         }  
     }
 }

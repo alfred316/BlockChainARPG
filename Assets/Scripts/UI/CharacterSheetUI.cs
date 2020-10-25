@@ -11,6 +11,7 @@ public class CharacterSheetUI : MonoBehaviour
     public GameObject MagAttackValue;
     public GameObject CritValue;
     public GameObject CharacterSheetPanel;
+    public GameObject backImage;
 
     GameObject player;                          // Reference to the player GameObject.
     PlayerCharacterManager playerManager;
@@ -40,10 +41,12 @@ public class CharacterSheetUI : MonoBehaviour
             if(CharacterSheetPanel.activeInHierarchy)
             {
                 CharacterSheetPanel.SetActive(false);
+                backImage.SetActive(false);
             }
             else if(!CharacterSheetPanel.activeInHierarchy)
             {
                 CharacterSheetPanel.SetActive(true);
+                backImage.SetActive(true);
                 UpdateCharacterSheetVisuals();
             }
         }

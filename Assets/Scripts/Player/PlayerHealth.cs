@@ -24,6 +24,7 @@ public class PlayerHealth : MonoBehaviour
     bool isDead;                                                // Whether the player is dead.
     bool damaged;                                               // True when the player gets damaged.
     public GameObject deathUI;
+    public GameObject leaderboardUI;
 
     // Start is called before the first frame update
     void Awake()
@@ -117,6 +118,7 @@ public class PlayerHealth : MonoBehaviour
         //playerShooting.enabled = false;
 
         deathUI.SetActive(true);
+        leaderboardUI.SetActive(true);
     }
 
     public void restartGame()
