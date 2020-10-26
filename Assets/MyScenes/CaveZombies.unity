@@ -47255,7 +47255,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1449539144
 RectTransform:
   m_ObjectHideFlags: 0
@@ -58047,6 +58047,11 @@ PrefabInstance:
       propertyPath: playerAttack
       value: 
       objectReference: {fileID: 194925174}
+    - target: {fileID: 1793662428510775498, guid: 835f594d9d41deb4a8b0bd7fd7d885af,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1793662428510775502, guid: 835f594d9d41deb4a8b0bd7fd7d885af,
         type: 3}
       propertyPath: m_Constraints
@@ -58057,6 +58062,11 @@ PrefabInstance:
       propertyPath: footSteps
       value: 
       objectReference: {fileID: 2073437517}
+    - target: {fileID: 1793662428510775503, guid: 835f594d9d41deb4a8b0bd7fd7d885af,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5380032417698010831, guid: 835f594d9d41deb4a8b0bd7fd7d885af,
         type: 3}
       propertyPath: m_Name
@@ -63542,7 +63552,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1773000828
 RectTransform:
   m_ObjectHideFlags: 0
