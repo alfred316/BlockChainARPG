@@ -1,35 +1,99 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using System.Runtime.InteropServices;
+using UnityEngine.SceneManagement;
+
 
 public class CryptoManager : MonoBehaviour
 {
+    public Button connectButton;
+    public Button approveButton;
+    public Button stakeButton;
+
+    [DllImport("__Internal")]
+    private static extern void ConnectToMetaMask(string objectName, string callback);
+
+    [DllImport("__Internal")]
+    private static extern void ApproveUSDC(string objectName, string callback, string amount);
+
+    [DllImport("__Internal")]
+    private static extern void StakeEntry(string objectName, string callback, string amount);
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        Button btn = connectButton.GetComponent<Button>();
+        btn.onClick.AddListener(OnClickConnectMetaMask);
+
+        approveButton.onClick.AddListener(OnClickApproveUSDC);
+
+        stakeButton.onClick.AddListener(OnClickStake);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     //for button1
-    public void ButtonOneClick() //stake
+    public void OnClickStake() //stake
     {
-        Debug.Log("button 1 pressed");
+        if (Application.platform == RuntimePlatform.WebGLPlayer)
+        {
+            StakeEntry(gameObject.name, "StakeEntryCallback", "1000000");
+        }
+        else
+        {
+            Debug.Log("DAI has been staked");
+            StakeEntryCallback("Switching to main scene");
+        }
     }
 
     //for button2
-    public void ButtonTwoClick() //approve
+    public void OnClickApproveUSDC() //approve
     {
-        Debug.Log("button 2 pressed");
+        if (Application.platform == RuntimePlatform.WebGLPlayer)
+        {
+            ApproveUSDC(gameObject.name, "ApproveUSDCCallback", "1000000");
+        }
+        else
+        {
+            Debug.Log("DAI has been approved");
+        }
     }
 
-    public void ButtonThreeClick() //connect mask
+    public void OnClickConnectMetaMask() //connect mask
     {
-        Debug.Log("button 3 pressed");
+        if (Application.platform == RuntimePlatform.WebGLPlayer)
+        {
+            ConnectToMetaMask(gameObject.name, "ConnectToMetaMaskCallback");
+        }
+        else
+        {
+            ConnectToMetaMaskCallback("Connect To MetaMask Callback from Unity");
+        }
+    }
+
+    void ConnectToMetaMaskCallback(string data)
+    {
+    }
+
+    void ApproveUSDCCallback(string data)
+    {
+    }
+
+    void StakeEntryCallback(string data)
+    {
+        SwitchToLandScene();
+    }
+
+    void SwitchToLandScene()
+    {
+        //SceneManager.LoadScene("PersistentScene");
+        SceneManager.LoadScene("CaveZombies");
     }
 }
