@@ -29124,6 +29124,7 @@ MonoBehaviour:
   connectButton: {fileID: 1290101958}
   approveButton: {fileID: 2018160689}
   stakeButton: {fileID: 1414033367}
+  inputField: {fileID: 1240014950}
 --- !u!4 &916474432
 Transform:
   m_ObjectHideFlags: 0
