@@ -22,6 +22,8 @@ TagManager:
   - PortalIn
   - RebuildWall
   - WallSpawnpoint
+  - OutSpawn
+  - InSpawn
   layers:
   - Default
   - TransparentFX

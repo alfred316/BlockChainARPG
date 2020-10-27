@@ -7,7 +7,7 @@ public class PlayerCharacterManager : MonoBehaviour
     private PlayerCharacterSheet _playerCharacterSheet;
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         _playerCharacterSheet = new PlayerCharacterSheet();
     }
