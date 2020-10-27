@@ -19,7 +19,7 @@ public class EnemyAttack : MonoBehaviour
     BreakableEnv envWall;
     bool wallInRange;
 
-    void Awake()
+    void Start()
     {
         // Setting up the references.
         player = GameObject.FindGameObjectWithTag("Player");
