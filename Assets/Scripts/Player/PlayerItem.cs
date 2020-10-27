@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEngine.Networking;
 
 public class PlayerItem 
 {
@@ -18,10 +19,38 @@ public class PlayerItem
     private bool _inbag;
     public PlayerItem(int id)
     {
+        LootListManager lootList = new LootListManager();
         //reads file and loads data from it based on id
-        string path = "Assets/Resources/LootList.txt";
-        StreamReader reader = new StreamReader(path);
-
+        //string path = "Assets/Resources/LootList.txt";
+        //StreamReader reader = new StreamReader(path);
+        string tmp = lootList.lootList[1][2];
+        Debug.Log("item from lootList: " + tmp);
+        //UnityWebRequest www = UnityWebRequest.Get("https://raw.githubusercontent.com/alfred316/alfred316.github.io/master/other/LootList.txt");
+        //string data = www.downloadHandler.text;
+        //Debug.Log("data is: " + data);
+        //GetText();
+        for(int i = 0; i < lootList.size; i++)
+        {
+            if (int.Parse(lootList.lootList[i][0]) == id)
+            {
+                //found item
+                Debug.Log("found item, adding: " + lootList.lootList[i][2]);
+                _id = id;
+                _rarity = lootList.lootList[i][1];
+                _name = lootList.lootList[i][2];
+                _stamina = float.Parse(lootList.lootList[i][3]);
+                _mana = float.Parse(lootList.lootList[i][4]);
+                _armor = float.Parse(lootList.lootList[i][5]);
+                _phyattack = float.Parse(lootList.lootList[i][6]);
+                _magattack = float.Parse(lootList.lootList[i][7]);
+                _crit = float.Parse(lootList.lootList[i][8]);
+                _equipped = false;
+                _inbag = false;
+                break;
+            }
+        }
+        
+        /*
         while (!reader.EndOfStream)
         {
             string line = reader.ReadLine();
@@ -47,8 +76,31 @@ public class PlayerItem
             }
 
         }
+        */
+        
     }
+    /*
+    IEnumerator GetText()
+    {
+        UnityWebRequest www = UnityWebRequest.Get("http://jsonplaceholder.typicode.com/posts/1");
 
+        yield return www.SendWebRequest();
+
+        if (www.isNetworkError)
+        {
+            Debug.Log(www.error);
+        }
+        else
+        {
+            // Show results as text
+            Debug.Log("in gettext");
+            Debug.Log(www.downloadHandler.text);
+
+            // Or retrieve results as binary data
+            //byte[] results = www.downloadHandler.data;
+        }
+    }
+    */
     //getters
     public int GetId()
     {

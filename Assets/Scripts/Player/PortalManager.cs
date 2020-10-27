@@ -6,11 +6,17 @@ public class PortalManager : MonoBehaviour
 {
     GameObject PortalOut;
     GameObject PortalIn;
+
+    GameObject InSpawn;
+    GameObject OutSpawn;
     // Start is called before the first frame update
     void Start()
     {
         PortalOut = GameObject.FindGameObjectWithTag("PortalOut");
         PortalIn = GameObject.FindGameObjectWithTag("PortalIn");
+
+        InSpawn = GameObject.FindGameObjectWithTag("InSpawn");
+        OutSpawn = GameObject.FindGameObjectWithTag("OutSpawn");
     }
 
     // Update is called once per frame
@@ -25,7 +31,7 @@ public class PortalManager : MonoBehaviour
         {
             if (other.transform.tag == "Player")
             {
-                other.transform.position = new Vector3(PortalIn.transform.position.x, other.transform.position.y, PortalIn.transform.position.z + 3);
+                other.transform.position = new Vector3(OutSpawn.transform.position.x, other.transform.position.y, OutSpawn.transform.position.z + 3);
             }
         }
 
@@ -33,7 +39,7 @@ public class PortalManager : MonoBehaviour
         {
             if (other.transform.tag == "Player")
             {
-                other.transform.position = new Vector3(PortalOut.transform.position.x, other.transform.position.y, PortalOut.transform.position.z - 3);
+                other.transform.position = new Vector3(InSpawn.transform.position.x, other.transform.position.y, InSpawn.transform.position.z - 3);
             }
         }
 

@@ -26,11 +26,14 @@ public class EnemyLootManager : MonoBehaviour
             PlayerCharacterSheet playerCharacterSheet = playerManager.GetPlayerCharacterSheet();
             if (transform.tag == "CommonLoot")
             {
+                Debug.Log("Generating common loot");
                 loot = lootDrop.CommonLootDrop();
+                Debug.Log("Got loot");
                 bool addItem = playerManager.GetPlayerCharacterSheet().GetInventory().AddItemToInventory(loot);
                 //add item stats to character sheet
                 if(addItem)
                 {
+                    Debug.Log("adding item");
                     float stamina = playerCharacterSheet.GetStamina() + loot.GetStamina();
                     playerCharacterSheet.SetStamina(stamina);
                     float currentHealth = playerCharacterSheet.GetCurrentHealth() + loot.GetStamina();
@@ -58,10 +61,13 @@ public class EnemyLootManager : MonoBehaviour
 
             if (transform.tag == "RareLoot")
             {
+                Debug.Log("Generating rare loot");
                 loot = lootDrop.RareLootDrop();
+                Debug.Log("Got loot");
                 bool addItem = collision.transform.GetComponent<PlayerCharacterManager>().GetPlayerCharacterSheet().GetInventory().AddItemToInventory(loot);
                 if (addItem)
                 {
+                    Debug.Log("adding item");
                     float stamina = playerCharacterSheet.GetStamina() + loot.GetStamina();
                     playerCharacterSheet.SetStamina(stamina);
                     float currentHealth = playerCharacterSheet.GetCurrentHealth() + loot.GetStamina();
@@ -88,10 +94,13 @@ public class EnemyLootManager : MonoBehaviour
 
             if (transform.tag == "EpicLoot")
             {
+                Debug.Log("Generating epic loot");
                 loot = lootDrop.EpicLootDrop();
+                Debug.Log("Got loot");
                 bool addItem = collision.transform.GetComponent<PlayerCharacterManager>().GetPlayerCharacterSheet().GetInventory().AddItemToInventory(loot);
                 if (addItem)
                 {
+                    Debug.Log("adding item");
                     float stamina = playerCharacterSheet.GetStamina() + loot.GetStamina();
                     playerCharacterSheet.SetStamina(stamina);
                     float currentHealth = playerCharacterSheet.GetCurrentHealth() + loot.GetStamina();
@@ -118,10 +127,13 @@ public class EnemyLootManager : MonoBehaviour
 
             if (transform.tag == "LegendaryLoot")
             {
+                Debug.Log("Generating legendary loot");
                 loot = lootDrop.LegendaryLootDrop();
+                Debug.Log("Got loot");
                 bool addItem = collision.transform.GetComponent<PlayerCharacterManager>().GetPlayerCharacterSheet().GetInventory().AddItemToInventory(loot);
                 if (addItem)
                 {
+                    Debug.Log("adding item");
                     float stamina = playerCharacterSheet.GetStamina() + loot.GetStamina();
                     playerCharacterSheet.SetStamina(stamina);
                     float currentHealth = playerCharacterSheet.GetCurrentHealth() + loot.GetStamina();
