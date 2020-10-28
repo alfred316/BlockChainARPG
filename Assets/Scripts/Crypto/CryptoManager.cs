@@ -40,6 +40,7 @@ public class CryptoManager : MonoBehaviour
         approveButton.onClick.AddListener(OnClickApproveUSDC);
 
         stakeButton.onClick.AddListener(OnClickStake);
+        Time.timeScale = 0;
     }
 
     // Update is called once per frame
@@ -113,6 +114,7 @@ public class CryptoManager : MonoBehaviour
         Gates.SetActive(true);
         Gates1.SetActive(false);
         secondLogin.SetActive(false);
+        Time.timeScale = 1;
     }
 
     void SwitchToLandScene()
