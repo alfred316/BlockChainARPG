@@ -12,7 +12,7 @@ public class EnemySpawnManager : MonoBehaviour
     public GameObject zombie;
     public float spawnTime = 30f;            // How long between each spawn.
     public Transform[] spawnPoints;         // An array of the spawn points this enemy can spawn from.
-
+    GameObject[] enemies;
     public Text waveCount;
 
     // Start is called before the first frame update
@@ -33,12 +33,22 @@ public class EnemySpawnManager : MonoBehaviour
         {
             enemiesInWave = 3;
         }
-        if(currentWave >= 5 && currentWave < 5)
+        if(currentWave >= 3 && currentWave < 5)
         {
+            enemies = GameObject.FindGameObjectsWithTag("Enemy");
+            foreach(GameObject enemy in enemies)
+            {
+                enemy.GetComponent<EnemyAttack>().attackDamage = 20;
+            }
             enemiesInWave = 5;
         }
         if(currentWave == 5)
         {
+            enemies = GameObject.FindGameObjectsWithTag("Enemy");
+            foreach (GameObject enemy in enemies)
+            {
+                enemy.GetComponent<EnemyAttack>().attackDamage = 25;
+            }
             enemiesInWave = 10;
         }
     }
