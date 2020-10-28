@@ -12,6 +12,8 @@ public class CryptoManager : MonoBehaviour
     public Button approveButton;
     public Button stakeButton;
 
+    public Text inputField;
+
     [DllImport("__Internal")]
     private static extern void ConnectToMetaMask(string objectName, string callback);
 
@@ -42,6 +44,9 @@ public class CryptoManager : MonoBehaviour
     //for button1
     public void OnClickStake() //stake
     {
+        //getting text from input field
+        string inputText = inputField.text;
+
         if (Application.platform == RuntimePlatform.WebGLPlayer)
         {
             StakeEntry(gameObject.name, "StakeEntryCallback", "1000000");
@@ -56,6 +61,9 @@ public class CryptoManager : MonoBehaviour
     //for button2
     public void OnClickApproveUSDC() //approve
     {
+        //getting text from input field
+        string inputText = inputField.text;
+
         if (Application.platform == RuntimePlatform.WebGLPlayer)
         {
             ApproveUSDC(gameObject.name, "ApproveUSDCCallback", "1000000");
