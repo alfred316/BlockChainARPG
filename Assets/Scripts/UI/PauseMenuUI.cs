@@ -19,10 +19,12 @@ public class PauseMenuUI : MonoBehaviour
             if (PauseUI.activeInHierarchy)
             {
                 PauseUI.SetActive(false);
+                Time.timeScale = 1;
             }
             else if (!PauseUI.activeInHierarchy)
             {
                 PauseUI.SetActive(true);
+                Time.timeScale = 0;
             }
         }
     }
