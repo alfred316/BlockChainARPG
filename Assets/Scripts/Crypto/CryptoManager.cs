@@ -64,10 +64,6 @@ public class CryptoManager : MonoBehaviour
             Debug.Log("DAI has been staked");
             StakeEntryCallback("Switching to main scene");
         }
-
-        Gates.SetActive(true);
-        Gates1.SetActive(false);
-        secondLogin.SetActive(false);
     }
 
     //for button2
@@ -99,13 +95,12 @@ public class CryptoManager : MonoBehaviour
         {
             ConnectToMetaMaskCallback("Connect To MetaMask Callback from Unity");
         }
-
-        firstLogin.SetActive(false);
-        secondLogin.SetActive(true);
     }
 
     void ConnectToMetaMaskCallback(string data)
     {
+        firstLogin.SetActive(false);
+        secondLogin.SetActive(true);
     }
 
     void ApproveUSDCCallback(string data)
@@ -115,6 +110,9 @@ public class CryptoManager : MonoBehaviour
     void StakeEntryCallback(string data)
     {
         //SwitchToLandScene();
+        Gates.SetActive(true);
+        Gates1.SetActive(false);
+        secondLogin.SetActive(false);
     }
 
     void SwitchToLandScene()
