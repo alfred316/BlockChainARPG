@@ -76,9 +76,17 @@ public class PlayerHealth : MonoBehaviour
     {
         // Set the damaged flag so the screen will flash.
         damaged = true;
-
+        float armor = playerCharacterManager.GetPlayerCharacterSheet().GetArmor();
         // Reduce the current health by the damage amount.
-        currentHealth -= amount;
+        if(armor < amount)
+        {
+            currentHealth = currentHealth - (amount - armor);
+        }
+        else if (armor >= amount)
+        {
+            currentHealth = currentHealth - 1;
+        }
+        //currentHealth = currentHealth - (amount - armor);
         playerCharacterManager.GetPlayerCharacterSheet().SetCurrentHealth(currentHealth);
         // Set the health bar's value to the current health.
         healthSlider.value = currentHealth;
