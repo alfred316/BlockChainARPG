@@ -8,11 +8,15 @@ using UnityEngine.SceneManagement;
 
 public class CryptoManager : MonoBehaviour
 {
-    public Button connectButton;
-    public Button approveButton;
-    public Button stakeButton;
+    //public Button connectButton;
+    //public Button approveButton;
+    //public Button stakeButton;
 
-    public Text inputField;
+    public GameObject firstLogin;
+    public GameObject secondLogin;
+    public GameObject inputField;
+
+    //public Text inputField;
 
     [DllImport("__Internal")]
     private static extern void ConnectToMetaMask(string objectName, string callback);
@@ -27,12 +31,12 @@ public class CryptoManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Button btn = connectButton.GetComponent<Button>();
-        btn.onClick.AddListener(OnClickConnectMetaMask);
+        //Button btn = connectButton.GetComponent<Button>();
+        //btn.onClick.AddListener(OnClickConnectMetaMask);
 
-        approveButton.onClick.AddListener(OnClickApproveUSDC);
+        //approveButton.onClick.AddListener(OnClickApproveUSDC);
 
-        stakeButton.onClick.AddListener(OnClickStake);
+        //stakeButton.onClick.AddListener(OnClickStake);
     }
 
     // Update is called once per frame
@@ -45,7 +49,8 @@ public class CryptoManager : MonoBehaviour
     public void OnClickStake() //stake
     {
         //getting text from input field
-        string inputText = inputField.text;
+        //string inputText = inputField.text;
+        int inputText = int.Parse(inputField.GetComponent<Text>().text);
 
         if (Application.platform == RuntimePlatform.WebGLPlayer)
         {
@@ -62,7 +67,8 @@ public class CryptoManager : MonoBehaviour
     public void OnClickApproveUSDC() //approve
     {
         //getting text from input field
-        string inputText = inputField.text;
+        //string inputText = inputField.text;
+        int inputText = int.Parse(inputField.GetComponent<Text>().text);
 
         if (Application.platform == RuntimePlatform.WebGLPlayer)
         {
@@ -84,6 +90,9 @@ public class CryptoManager : MonoBehaviour
         {
             ConnectToMetaMaskCallback("Connect To MetaMask Callback from Unity");
         }
+
+        firstLogin.SetActive(false);
+        secondLogin.SetActive(true);
     }
 
     void ConnectToMetaMaskCallback(string data)

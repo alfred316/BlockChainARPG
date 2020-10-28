@@ -39089,9 +39089,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1125257787}
-        m_TargetAssemblyTypeName: MainUIFunction, Assembly-CSharp
-        m_MethodName: ApproveFunction
+      - m_Target: {fileID: 1503028049}
+        m_TargetAssemblyTypeName: CryptoManager, Assembly-CSharp
+        m_MethodName: OnClickApproveUSDC
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -83182,10 +83182,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2edea56a5af2524484bfb7e5c0cb22f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connectButton: {fileID: 1699235592}
-  approveButton: {fileID: 684544355}
-  stakeButton: {fileID: 1962646100}
-  inputField: {fileID: 676095099}
+  firstLogin: {fileID: 1671906673}
+  secondLogin: {fileID: 1644278308}
+  inputField: {fileID: 676095096}
 --- !u!4 &1503028050
 Transform:
   m_ObjectHideFlags: 0
@@ -93467,9 +93466,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1125257787}
-        m_TargetAssemblyTypeName: MainUIFunction, Assembly-CSharp
-        m_MethodName: MetaMaskLoginFunction
+      - m_Target: {fileID: 1503028049}
+        m_TargetAssemblyTypeName: CryptoManager, Assembly-CSharp
+        m_MethodName: OnClickConnectMetaMask
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -110395,9 +110394,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1125257787}
-        m_TargetAssemblyTypeName: MainUIFunction, Assembly-CSharp
-        m_MethodName: StakeFunction
+      - m_Target: {fileID: 1503028049}
+        m_TargetAssemblyTypeName: CryptoManager, Assembly-CSharp
+        m_MethodName: OnClickStake
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
