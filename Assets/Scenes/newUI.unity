@@ -39088,19 +39088,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 684544356}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1503028049}
-        m_TargetAssemblyTypeName: CryptoManager, Assembly-CSharp
-        m_MethodName: OnClickApproveUSDC
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &684544356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83182,9 +83170,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2edea56a5af2524484bfb7e5c0cb22f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  connectButton: {fileID: 1699235592}
+  approveButton: {fileID: 684544355}
+  stakeButton: {fileID: 1962646100}
   firstLogin: {fileID: 1671906673}
   secondLogin: {fileID: 1644278308}
   inputField: {fileID: 676095096}
+  Gates: {fileID: 1646707001}
+  Gates1: {fileID: 749000997}
 --- !u!4 &1503028050
 Transform:
   m_ObjectHideFlags: 0
@@ -93465,19 +93458,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1699235593}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1503028049}
-        m_TargetAssemblyTypeName: CryptoManager, Assembly-CSharp
-        m_MethodName: OnClickConnectMetaMask
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1699235593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110357,55 +110338,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1962646101}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 749000997}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1644278308}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1646707001}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1503028049}
-        m_TargetAssemblyTypeName: CryptoManager, Assembly-CSharp
-        m_MethodName: OnClickStake
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1962646101
 MonoBehaviour:
   m_ObjectHideFlags: 0

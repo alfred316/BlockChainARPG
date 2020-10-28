@@ -8,13 +8,16 @@ using UnityEngine.SceneManagement;
 
 public class CryptoManager : MonoBehaviour
 {
-    //public Button connectButton;
-    //public Button approveButton;
-    //public Button stakeButton;
+    public Button connectButton;
+    public Button approveButton;
+    public Button stakeButton;
 
     public GameObject firstLogin;
     public GameObject secondLogin;
     public GameObject inputField;
+
+    public GameObject Gates;
+    public GameObject Gates1;
 
     //public Text inputField;
 
@@ -31,12 +34,12 @@ public class CryptoManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Button btn = connectButton.GetComponent<Button>();
-        //btn.onClick.AddListener(OnClickConnectMetaMask);
+        Button btn = connectButton.GetComponent<Button>();
+        btn.onClick.AddListener(OnClickConnectMetaMask);
 
-        //approveButton.onClick.AddListener(OnClickApproveUSDC);
+        approveButton.onClick.AddListener(OnClickApproveUSDC);
 
-        //stakeButton.onClick.AddListener(OnClickStake);
+        stakeButton.onClick.AddListener(OnClickStake);
     }
 
     // Update is called once per frame
@@ -50,7 +53,7 @@ public class CryptoManager : MonoBehaviour
     {
         //getting text from input field
         //string inputText = inputField.text;
-        int inputText = int.Parse(inputField.GetComponent<Text>().text);
+        //int inputText = int.Parse(inputField.GetComponent<Text>().text);
 
         if (Application.platform == RuntimePlatform.WebGLPlayer)
         {
@@ -61,6 +64,10 @@ public class CryptoManager : MonoBehaviour
             Debug.Log("DAI has been staked");
             StakeEntryCallback("Switching to main scene");
         }
+
+        Gates.SetActive(true);
+        Gates1.SetActive(false);
+        secondLogin.SetActive(false);
     }
 
     //for button2
@@ -68,7 +75,7 @@ public class CryptoManager : MonoBehaviour
     {
         //getting text from input field
         //string inputText = inputField.text;
-        int inputText = int.Parse(inputField.GetComponent<Text>().text);
+        //int inputText = int.Parse(inputField.GetComponent<Text>().text);
 
         if (Application.platform == RuntimePlatform.WebGLPlayer)
         {
@@ -82,6 +89,8 @@ public class CryptoManager : MonoBehaviour
 
     public void OnClickConnectMetaMask() //connect mask
     {
+        Debug.Log("OnClickConnectMetaMask");
+
         if (Application.platform == RuntimePlatform.WebGLPlayer)
         {
             ConnectToMetaMask(gameObject.name, "ConnectToMetaMaskCallback");
@@ -105,7 +114,7 @@ public class CryptoManager : MonoBehaviour
 
     void StakeEntryCallback(string data)
     {
-        SwitchToLandScene();
+        //SwitchToLandScene();
     }
 
     void SwitchToLandScene()
