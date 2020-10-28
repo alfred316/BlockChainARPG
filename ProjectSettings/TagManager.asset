@@ -24,6 +24,7 @@ TagManager:
   - WallSpawnpoint
   - OutSpawn
   - InSpawn
+  - PauseMenu
   layers:
   - Default
   - TransparentFX

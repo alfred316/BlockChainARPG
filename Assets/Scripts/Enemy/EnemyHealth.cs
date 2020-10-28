@@ -36,6 +36,8 @@ public class EnemyHealth : MonoBehaviour
     private void Start()
     {
         lootDrop = new EnemyLootDrop();
+
+        Debug.Log("in EnemyHealth");
     }
 
     void Update()

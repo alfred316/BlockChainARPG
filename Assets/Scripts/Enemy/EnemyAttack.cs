@@ -28,6 +28,10 @@ public class EnemyAttack : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
+    private void Start()
+    {
+        Debug.Log("in EnemyAttack");
+    }
 
     void OnTriggerEnter(Collider other)
     {
