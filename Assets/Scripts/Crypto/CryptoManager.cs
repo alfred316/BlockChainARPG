@@ -19,6 +19,8 @@ public class CryptoManager : MonoBehaviour
     public GameObject Gates;
     public GameObject Gates1;
 
+    public GameObject statusui;
+
     //public Text inputField;
 
     [DllImport("__Internal")]
@@ -114,6 +116,7 @@ public class CryptoManager : MonoBehaviour
         Gates.SetActive(true);
         Gates1.SetActive(false);
         secondLogin.SetActive(false);
+        statusui.SetActive(true);
         Time.timeScale = 1;
     }
 
