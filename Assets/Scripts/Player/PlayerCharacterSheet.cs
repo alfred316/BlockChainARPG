@@ -20,7 +20,7 @@ public class PlayerCharacterSheet
         _currentHealth = _stamina;
         _mana = 100;
         _currentMana = _mana;
-        _armor = 10;
+        _armor = 2;
         _phyattack = 5;
         _magattack = 5;
         _crit = 1;
