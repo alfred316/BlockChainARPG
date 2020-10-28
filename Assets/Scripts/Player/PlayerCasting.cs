@@ -45,8 +45,8 @@ public class PlayerCasting : MonoBehaviour
     {
         currentMana = playerCharacterManager.GetPlayerCharacterSheet().GetCurrentMana(); //+ 0.083f based on 5mps
         //playerCharacterManager.GetPlayerCharacterSheet().SetCurrentMana(currentMana);
-        manaSlider.value = currentMana;
-        manaSlider.maxValue = playerCharacterManager.GetPlayerCharacterSheet().GetMagic();
+        manaSlider.value = currentMana / 100.0f;
+        manaSlider.maxValue = playerCharacterManager.GetPlayerCharacterSheet().GetMagic() / 100.0f;
         // Add the time since Update was last called to the timer.
         timer += Time.deltaTime;
 
@@ -65,7 +65,7 @@ public class PlayerCasting : MonoBehaviour
 
         currentMana -= manaCost;
         playerCharacterManager.GetPlayerCharacterSheet().SetCurrentMana(currentMana);
-        manaSlider.value = currentMana;
+        manaSlider.value = currentMana / 100.0f;
 
         CharacterSheetUI charSheetUI = GameObject.FindGameObjectWithTag("CharacterSheetUI").GetComponent<CharacterSheetUI>();
         charSheetUI.UpdateCharacterSheetVisuals();

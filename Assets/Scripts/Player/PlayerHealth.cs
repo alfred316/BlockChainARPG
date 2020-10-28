@@ -53,8 +53,8 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth = playerCharacterManager.GetPlayerCharacterSheet().GetCurrentHealth(); //+ 0.05f based on 3hps 
         //playerCharacterManager.GetPlayerCharacterSheet().SetCurrentHealth(currentHealth);
-        healthSlider.value = currentHealth;
-        healthSlider.maxValue = playerCharacterManager.GetPlayerCharacterSheet().GetStamina();
+        healthSlider.value = currentHealth / 100.0f;
+        healthSlider.maxValue = playerCharacterManager.GetPlayerCharacterSheet().GetStamina() / 100.0f;
         // If the player has just been damaged...
         if (damaged)
         {
@@ -89,7 +89,7 @@ public class PlayerHealth : MonoBehaviour
         //currentHealth = currentHealth - (amount - armor);
         playerCharacterManager.GetPlayerCharacterSheet().SetCurrentHealth(currentHealth);
         // Set the health bar's value to the current health.
-        healthSlider.value = currentHealth;
+        healthSlider.value = currentHealth / 100.0f;
 
         CharacterSheetUI charSheetUI = GameObject.FindGameObjectWithTag("CharacterSheetUI").GetComponent<CharacterSheetUI>();
         charSheetUI.UpdateCharacterSheetVisuals();
