@@ -8,7 +8,7 @@
 - Interest-baring e-sports tournament video game built in Unity3D and uses AAVE liquidity pools and ChainLink VRF NFT tokens
 
 #### Link to a video demo 
-- https://www.youtube.com/watch?v=HzKDb5uXGM4
+- https://youtu.be/8FgYF3mxcPY
 
 #### Link to a working product/live demo
 - ...

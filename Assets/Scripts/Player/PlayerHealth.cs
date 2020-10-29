@@ -131,6 +131,6 @@ public class PlayerHealth : MonoBehaviour
 
     public void restartGame()
     {
-        SceneManager.LoadScene("CaveZombies");
+        SceneManager.LoadScene("newUI");
     }
 }
